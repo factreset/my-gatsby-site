@@ -1,5 +1,5 @@
 import * as React from "react";
-import Layout from "../../components/layout";
+import SiteLayout from "../../components/SiteLayout";
 import Seo from "../../components/seo";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
@@ -7,7 +7,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const BlogPost = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <SiteLayout pageTitle={data.mdx.frontmatter.title}>
       <GatsbyImage image={image} alt={data.mdx.frontmatter.hero_image_alt} />
       <p>
         Photo credit:{" "}
@@ -17,7 +17,7 @@ const BlogPost = ({ data, children }) => {
       </p>
       <div>{children}</div>
       <p>Posted: {data.mdx.frontmatter.date}</p>
-    </Layout>
+    </SiteLayout>
   );
 };
 

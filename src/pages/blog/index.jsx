@@ -1,11 +1,11 @@
 import * as React from "react";
-import Layout from "../../components/layout";
+import SiteLayout from "../../components/SiteLayout";
 import Seo from "../../components/seo";
 import { graphql, Link } from "gatsby";
 
 const BlogPage = ({ data }) => {
   return (
-    <Layout pageTitle="My Blog Posts">
+    <SiteLayout pageTitle="My Blog Posts">
       {data.allMdx.nodes.map((node) => (
         <article key={node.id}>
           <h2>
@@ -17,7 +17,7 @@ const BlogPage = ({ data }) => {
           <p>ID: {node.id}</p>
         </article>
       ))}
-    </Layout>
+    </SiteLayout>
   );
 };
 
