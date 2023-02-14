@@ -1,19 +1,19 @@
 // Step 1: Import React
 import * as React from "react";
-import Layout from "../components/layout";
+import SiteLayout from "../components/SiteLayout";
 import Seo from "../components/seo";
 import { StaticImage } from "gatsby-plugin-image";
 
 // Step 2: Define your component
 const IndexPage = () => {
   return (
-    <Layout pageTitle="House of Mine">
+    <SiteLayout pageTitle="House of Mine">
       <p>Nahahahahahaahahh I'm home honeybunch</p>
       <StaticImage
         src="../images/greth-the-undying.png"
         alt="Greth the Undying"
       />
-    </Layout>
+    </SiteLayout>
   );
 };
 
